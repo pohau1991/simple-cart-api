@@ -23,7 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     ])
 });**/
 Route::group(['prefix' => 'items'], function(){
-    Route::put('/', [
-        'uses' => 'ItemController@getItems',
+    Route::get('/', [
+        'uses' => 'App\\Http\\Controllers\\ItemController@getItems',
     ]);
 });
